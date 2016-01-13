@@ -11,12 +11,16 @@
     "url": "https://github.com/pagarme/node-boleto"
   },
   "dependencies": {
-    "ejs": "1.0.0"
+    "ejs": "1.0.0",
+    "html-pdf": "^1.4.0"
   },
   "author": "Pedro Franceschi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pagarme/node-boleto/issues"
   },
-  "homepage": "https://github.com/pagarme/node-boleto"
+  "homepage": "https://github.com/pagarme/node-boleto",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
 }

@@ -16,7 +16,7 @@ var boleto = new Boleto({
   'agencia': "3978",
   'codigo_cedente': "6404154", // PSK (código da carteira)
   'carteira': "102"
-})
+});
 
 console.log(boleto['linha_digitavel']);
 
@@ -25,6 +25,14 @@ app.use(express.static(__dirname + '/../'));
 app.get('/', function(req, res){
   boleto.renderHTML(function(html){
 	return res.send(html);
+  });
+});
+
+app.get('/pdf', function(req, res){
+  boleto.renderPdf('./boleto.pdf', function(boleto){
+    res.contentType("application/pdf");
+
+    return res.send(boleto);
   });
 });
 
